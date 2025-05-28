@@ -181,8 +181,7 @@
 
         <!-- Spare Part Shop -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardSparePart"
-            android:layout_width="0dp"
+            android:id="@+id/cardSparePartShop" android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
@@ -201,21 +200,19 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@android:drawable/ic_menu_more"
-                    app:tint="#F44336"
-                    android:contentDescription="Shopping Cart Icon" />
+                    android:src="@android:drawable/ic_menu_preferences" app:tint="#F44336"
+                    android:contentDescription="Spare Part Shop Icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Spare Part\nShop"
+                    android:text="Spare Part Shop"
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textAlignment="center" />
             </LinearLayout>
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

@@ -56,9 +56,8 @@ class MainActivity : AppCompatActivity() {
             showEmergencyCallDialog()
         }
 
-        findViewById<CardView>(R.id.cardSparePart).setOnClickListener {
-            Toast.makeText(this, "Spare Part Shop selected", Toast.LENGTH_SHORT).show()
-            // TODO: Navigate to Spare Part Shop activity/fragment
+        findViewById<CardView>(R.id.cardSparePartShop).setOnClickListener {
+            startActivity(Intent(this, SparePartListActivity::class.java))
         }
 
         findViewById<CardView>(R.id.cardViewNearest).setOnClickListener {

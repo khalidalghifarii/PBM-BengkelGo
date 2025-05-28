@@ -30,6 +30,11 @@
         <activity android:name=".VehicleRepairFormActivity" android:theme="@style/Theme.BengkelGo" />
         <activity android:name=".OrderSummaryActivity" android:theme="@style/Theme.BengkelGo" />
         <activity android:name=".OrderConfirmationActivity" android:theme="@style/Theme.BengkelGo" />
+
+        <activity android:name=".SparePartListActivity" />
+        <activity android:name=".SparePartDetailActivity" />
+        <activity android:name=".ShoppingCartActivity" />
+        <activity android:name=".SparePartCheckoutActivity" />
     </application>
 
     <queries>
@@ -38,5 +43,7 @@
             <data android:scheme="tel" />
         </intent>
     </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
