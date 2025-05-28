@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth // Import Firebase Auth
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -18,9 +19,14 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var btnContinue: Button
     private lateinit var btnBack: ImageButton
 
+    private lateinit var auth: FirebaseAuth // Deklarasikan instance FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_register) // Mengatur layout untuk aktivitas ini
+
+        // Inisialisasi Firebase Auth
+        auth = FirebaseAuth.getInstance()
 
         // Inisialisasi views
         edtName = findViewById(R.id.edtName)
@@ -33,7 +39,6 @@ class RegisterActivity : AppCompatActivity() {
 
         // Set click listeners
         btnContinue.setOnClickListener {
-            // Tambahkan validasi registrasi di sini
             val name = edtName.text.toString().trim()
             val email = edtEmail.text.toString().trim()
             val phone = edtPhone.text.toString().trim()
@@ -44,15 +49,23 @@ class RegisterActivity : AppCompatActivity() {
                 address.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             } else {
-                // Implementasi registrasi sesuai kebutuhan (misalnya dengan Firebase)
-                // Untuk sementara, kita anggap berhasil registrasi
-                Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
+                // Daftarkan pengguna baru dengan Firebase
+                auth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // Registrasi berhasil
+                            Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
 
-                // Pindah ke halaman konfirmasi
-                val intent = Intent(this, CongratulationsActivity::class.java)
-                intent.putExtra("TYPE", "REGISTER")
-                startActivity(intent)
-                finish()
+                            // Pindah ke halaman konfirmasi
+                            val intent = Intent(this, CongratulationsActivity::class.java)
+                            intent.putExtra("TYPE", "REGISTER")
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            // Registrasi gagal
+                            Toast.makeText(this, "Registration failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                        }
+                    }
             }
         }
 

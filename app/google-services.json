@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "307728497289",
+    "project_id": "bengkel-go",
+    "storage_bucket": "bengkel-go.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307728497289:android:2022710b71650ea058e458",
+        "android_client_info": {
+          "package_name": "com.example.bengkelgo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNH7xbvNswNBJRQYLlGfWkIanYU8CSF_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
