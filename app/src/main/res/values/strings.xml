@@ -21,4 +21,5 @@
     <string name="register_success">You have successfully created an account, now log in with the account you have.</string>
     <string name="login_now">Login Now</string>
     <string name="reset_password">Reset Password</string>
+    <string name="app_tagline">Servis Kendaraan On-Demand, Teknisi Datang ke Lokasi Anda.</string>
 </resources>

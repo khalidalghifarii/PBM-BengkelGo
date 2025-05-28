@@ -1,17 +1,41 @@
 package com.example.bengkelgo
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import android.widget.TextView
+import android.widget.ImageView // Import ImageView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var tvUsername: TextView
+    private lateinit var imgProfileIcon: ImageView // Deklarasikan ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Set username from intent or Firebase user
-        val currentUser = intent.getStringExtra("username") ?: "Dayat"
+        auth = FirebaseAuth.getInstance()
+        tvUsername = findViewById(R.id.tvUsername)
+        imgProfileIcon = findViewById(R.id.imgProfileIcon) // Inisialisasi ImageView
+
+        // Ambil informasi pengguna dari Firebase
+        val user = auth.currentUser
+        if (user != null) {
+            tvUsername.text = user.displayName ?: user.email ?: "User"
+        } else {
+            tvUsername.text = "Guest"
+        }
+
+        // Setup click listener untuk icon profil
+        imgProfileIcon.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
 
         // Setup click listeners for service cards
         setupServiceCards()

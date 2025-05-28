@@ -53,14 +53,32 @@ class RegisterActivity : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            // Registrasi berhasil
-                            Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
+                            val user = auth.currentUser
+                            user?.let { firebaseUser -> // Ubah 'it' menjadi 'firebaseUser' untuk kejelasan
+                                val profileUpdates = com.google.firebase.auth.UserProfileChangeRequest.Builder()
+                                    .setDisplayName(name) // 'name' adalah nilai dari edtName dari input user
+                                    .build()
 
-                            // Pindah ke halaman konfirmasi
-                            val intent = Intent(this, CongratulationsActivity::class.java)
-                            intent.putExtra("TYPE", "REGISTER")
-                            startActivity(intent)
-                            finish()
+                                firebaseUser.updateProfile(profileUpdates)
+                                    .addOnCompleteListener { profileTask ->
+                                        if (profileTask.isSuccessful) {
+                                            Toast.makeText(this, "Registration successful and profile updated", Toast.LENGTH_SHORT).show()
+                                        } else {
+                                            Toast.makeText(this, "Registration successful but profile update failed: ${profileTask.exception?.message}", Toast.LENGTH_LONG).show()
+                                        }
+                                        // Tetap pindah ke halaman konfirmasi setelah update profil (baik berhasil atau gagal)
+                                        val intent = Intent(this, CongratulationsActivity::class.java)
+                                        intent.putExtra("TYPE", "REGISTER")
+                                        startActivity(intent)
+                                        finish()
+                                    }
+                            } ?: run {
+                                Toast.makeText(this, "Registration successful, but user object is null.", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this, CongratulationsActivity::class.java)
+                                intent.putExtra("TYPE", "REGISTER")
+                                startActivity(intent)
+                                finish()
+                            }
                         } else {
                             // Registrasi gagal
                             Toast.makeText(this, "Registration failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
