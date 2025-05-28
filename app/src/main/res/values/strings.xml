@@ -22,4 +22,11 @@
     <string name="login_now">Login Now</string>
     <string name="reset_password">Reset Password</string>
     <string name="app_tagline">Servis Kendaraan On-Demand, Teknisi Datang ke Lokasi Anda.</string>
+    <string name="emergency_call_dialog_title">Panggilan Darurat</string>
+    <string name="emergency_call_dialog_description">Fitur ini akan menghubungkan Anda dengan teknisi kami untuk bantuan darurat seperti ban bocor atau kendaraan mogok. Pastikan Anda berada di lokasi yang aman.</string>
+    <string name="emergency_call_dummy_number_label">Nomor Darurat BengkelGo:</string>
+    <string name="emergency_call_dummy_number">0812-0000-0000</string> <string name="emergency_call_action_call">Hubungi Sekarang</string>
+    <string name="dialog_cancel">Batal</string>
+    <string name="emergency_call_toast_message">Emergency Call dipilih</string>
+    <string name="no_phone_app_found">Tidak ada aplikasi telepon yang ditemukan.</string>
 </resources>
