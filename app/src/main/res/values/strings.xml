@@ -29,4 +29,56 @@
     <string name="dialog_cancel">Batal</string>
     <string name="emergency_call_toast_message">Emergency Call dipilih</string>
     <string name="no_phone_app_found">Tidak ada aplikasi telepon yang ditemukan.</string>
+    <string name="title_vehicle_repair">Vehicle Repair</string>
+    <string name="vehicle_type_prompt">Pilih Jenis Kendaraan</string>
+    <string name="service_type_prompt">Pilih Jenis Servis</string>
+    <string name="location_prompt">Pilih Lokasi Area</string>
+    <string name="payment_method_prompt">Pilih Metode Pembayaran</string>
+    <string name="hint_service_schedule">Pilih Jadwal Servis</string>
+    <string name="next">Next</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="label_vehicle_type">Vehicle Type: %s</string>
+    <string name="label_service_type">Service Type: %s</string>
+    <string name="label_location_area">Location Area: %s</string>
+    <string name="label_service_schedule">Service Schedule: %s</string>
+    <string name="label_payment_method">Payment Method: %s</string>
+    <string name="hint_complete_address">Input alamat lengkap Anda di sini...</string>
+    <string name="order_now">Order Now</string>
+    <string name="order_received_title">Order Received!</string>
+    <string name="order_received_message">Your service order has been received. We will process it shortly. Thank you for choosing our service!</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="please_fill_all_fields">Harap isi semua kolom.</string>
+    <string name="please_select_schedule">Harap pilih jadwal servis.</string>
+    <string name="order_submission_error">Gagal mengirim pesanan. Coba lagi.</string>
+    <string name="order_submitted_successfully">Pesanan berhasil dikirim!</string>
+    <string name="input_complete_address_hint">Input Alamat Lengkap</string>
+    <string name="select_date">Pilih Tanggal</string>
+    <string name="select_time">Pilih Waktu</string>
+
+    <string-array name="vehicle_types">
+        <item>Mobil</item>
+        <item>Motor</item>
+    </string-array>
+    <string-array name="service_types_car">
+        <item>Ganti Oli</item>
+        <item>Tune-Up Mesin</item>
+        <item>Cek Aki</item>
+        <item>Rotasi Ban</item>
+        <item>Servis Rem</item>
+    </string-array>
+    <string-array name="service_types_motorcycle">
+        <item>Ganti Oli</item>
+        <item>Servis CVT</item>
+        <item>Cek Aki</item>
+        <item>Tambal Ban</item>
+        <item>Servis Rantai</item>
+    </string-array>
+    <string-array name="locations">
+        <item>Banda Aceh</item>
+        <item>Aceh Besar</item>
+    </string-array>
+    <string-array name="payment_methods">
+        <item>Cash (Bayar di Tempat)</item>
+        <item>Transfer Bank (Konfirmasi Manual)</item>
+    </string-array>
 </resources>

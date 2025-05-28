@@ -26,6 +26,10 @@
         <activity android:name=".CongratulationsActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ProfileActivity" />
+
+        <activity android:name=".VehicleRepairFormActivity" android:theme="@style/Theme.BengkelGo" />
+        <activity android:name=".OrderSummaryActivity" android:theme="@style/Theme.BengkelGo" />
+        <activity android:name=".OrderConfirmationActivity" android:theme="@style/Theme.BengkelGo" />
     </application>
 
     <queries>

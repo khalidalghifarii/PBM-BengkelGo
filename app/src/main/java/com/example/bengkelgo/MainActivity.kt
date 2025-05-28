@@ -43,9 +43,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupServiceCards() {
+        // Vehicle Repair
         findViewById<CardView>(R.id.cardVehicleRepair).setOnClickListener {
-            Toast.makeText(this, "Vehicle Repair selected", Toast.LENGTH_SHORT).show()
-            // TODO: Navigate to Vehicle Repair activity/fragment
+            // Toast.makeText(this, "Vehicle Repair selected", Toast.LENGTH_SHORT).show() // Hapus atau komentari ini
+            startActivity(Intent(this, VehicleRepairFormActivity::class.java))
         }
 
         // Emergency Call
