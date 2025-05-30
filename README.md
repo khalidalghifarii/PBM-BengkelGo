@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6971f1da-6324-4b7c-b10f-6d0e95f255da" alt="![image](https://github.com/user-attachments/assets/6971f1da-6324-4b7c-b10f-6d0e95f255da)" width="200"/>
+</p>
+
 # BengkelGo
 
 > Servis Kendaraan On-Demand – Teknisi Datang ke Lokasi Pelanggan
