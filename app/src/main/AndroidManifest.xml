@@ -35,6 +35,8 @@
         <activity android:name=".SparePartDetailActivity" />
         <activity android:name=".ShoppingCartActivity" />
         <activity android:name=".SparePartCheckoutActivity" />
+
+        <activity android:name=".NearestServiceActivity" />
     </application>
 
     <queries>

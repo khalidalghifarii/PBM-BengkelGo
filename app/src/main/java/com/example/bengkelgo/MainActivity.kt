@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<CardView>(R.id.cardViewNearest).setOnClickListener {
-            Toast.makeText(this, "View Nearest selected", Toast.LENGTH_SHORT).show()
-            // TODO: Navigate to Map/Location activity/fragment
+            // Toast.makeText(this, "View Nearest selected", Toast.LENGTH_SHORT).show() // Remove or comment out
+            startActivity(Intent(this, NearestServiceActivity::class.java)) // Navigate to new activity
         }
     }
 

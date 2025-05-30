@@ -8,7 +8,6 @@
     android:background="@android:color/white"
     tools:context=".MainActivity">
 
-    <!-- Header Layout -->
     <LinearLayout
         android:id="@+id/headerLayout"
         android:layout_width="match_parent"
@@ -65,7 +64,6 @@
         android:background="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/headerLayout" />
 
-    <!-- Services Title -->
     <TextView
         android:id="@+id/tvSelectService"
         android:layout_width="wrap_content"
@@ -79,7 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider" />
 
-    <!-- Services Grid Layout -->
     <GridLayout
         android:id="@+id/servicesGrid"
         android:layout_width="0dp"
@@ -93,7 +90,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvSelectService">
 
-        <!-- Vehicle Repair -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardVehicleRepair"
             android:layout_width="0dp"
@@ -136,7 +132,6 @@
                 android:background="@drawable/service_card_border" />
         </androidx.cardview.widget.CardView>
 
-        <!-- Emergency Call -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardEmergencyCall"
             android:layout_width="0dp"
@@ -179,7 +174,6 @@
                 android:background="@drawable/service_card_border" />
         </androidx.cardview.widget.CardView>
 
-        <!-- Spare Part Shop -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSparePartShop" android:layout_width="0dp"
             android:layout_height="150dp"
@@ -219,7 +213,6 @@
                 android:background="@drawable/service_card_border" />
         </androidx.cardview.widget.CardView>
 
-        <!-- View Nearest -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardViewNearest"
             android:layout_width="0dp"
@@ -263,16 +256,18 @@
         </androidx.cardview.widget.CardView>
     </GridLayout>
 
-    <!-- Map Background Image -->
     <ImageView
+        android:id="@+id/imgHomeRectangle"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="Home decorative background"
         android:scaleType="centerCrop"
-        android:src="@android:drawable/gallery_thumb"
+        android:src="@drawable/homerectangle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/servicesGrid"
-        android:layout_marginTop="32dp"
-        android:alpha="0.7"
-        android:contentDescription="Map Background" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:layout_margin="8dp"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivGridPartImage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:srcCompat="@tools:sample/avatars" android:contentDescription="Spare Part Image"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvGridPartName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="WORK - VS KF"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvGridPartPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="USD 1999"
+        android:textSize="14sp"
+        android:textColor="#333333" android:textStyle="bold" />
+
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
